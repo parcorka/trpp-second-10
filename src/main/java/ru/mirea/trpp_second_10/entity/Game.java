@@ -1,12 +1,10 @@
-package ru.mirea.trpp_second_10.entity;
+package ru.mirea.trppsecond10.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.opencsv.bean.CsvBindByName;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.util.List;
 
 /** Сущность игры. */
 @Getter

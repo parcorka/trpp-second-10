@@ -1,9 +1,12 @@
-package ru.mirea.trpp_second_10.controllers;
+package ru.mirea.trppsecond10.controllers;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+
+import ru.mirea.trppsecond10.entity.Game;
+
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +20,8 @@ public class GameController {
 
     /** Конструктор. */
     public GameController() {
-        gameList = new CsvToBeanBuilder<Game>(new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv"))).withType(Game.class).build().parse();
+        InputStreamReader x = new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv"));
+        gameList = new CsvToBeanBuilder<Game>(x).withType(Game.class).build().parse();
     }
 
     /**
