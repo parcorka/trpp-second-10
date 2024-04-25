@@ -37,7 +37,7 @@ dependencies {
 
 
 application {
-    mainClass.set("ru.mirea.Application")
+    mainClass.set("ru.mirea.trppsecond10.Application")
 }
 
 java {
@@ -64,7 +64,7 @@ javadoc {
 }
 
 shadowJar {
-    archivesBaseName = "${project.name}"
+    archivesBaseName = "${project.name}-SafonovMax"
     libsDirName = "${project.name}"
     classifier('')
 }
